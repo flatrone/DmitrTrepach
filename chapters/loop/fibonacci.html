@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Числа Фибоначи</h1>
+    <p>На 2 числа</p>
+    <pre>
+        let one = 0;
+        let two = 1;
+        
+        for (let i = 1; i <= 10; i++) {
+            let current = one + two;
+            
+            one = two;
+            two = current;
+            
+            console.log(current);
+        }
+    </pre>
+    <p>На 3 числа</p>
+    <pre>
+        let a = 0, b = 1, c = 2;
+
+for (let i = 0; i < 10; i++) {
+  let sum = a + b + c;
+    a = b;
+    b = c;
+    c = sum;
+
+    arr.push(sum);
+}
+    </pre>
+
+
+</body>
+</html>

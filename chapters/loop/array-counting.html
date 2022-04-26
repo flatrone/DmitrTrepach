@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Результат в виде объекта</h1>
+    <p>Для подсчета чего-либо</p>
+    <pre>
+        let arr = ['a', 'b', 'c', 'a', 'a', 'b'];
+        let count = {};
+        
+        for (let elem of arr) {
+            if (count[elem] === undefined) {
+                count[elem] = 1;
+            } else {
+                count[elem]++;
+            }
+        }
+    </pre>
+
+
+
+</body>
+</html>

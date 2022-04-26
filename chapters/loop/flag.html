@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Флаги</h1>
+    <p>Для проверки отсутвия чего-либо</p>
+    <pre>
+
+Плохо
+
+let arr = [1, 2, 3, 4, 3, 5];
+
+for (let elem of arr) {
+    if (elem == 3) {
+        console.log('есть'); // выведет несколько раз
+    }
+}
+    </pre>
+    <pre>
+
+рабочий метод
+
+let arr = [1, 2, 3, 4, 3, 5];
+
+for (let elem of arr) {
+    if (elem == 3) {
+        console.log('есть');
+        break;  // завершим цикл
+    }
+}
+    </pre>
+    <pre>
+        
+Лучший метод
+
+let arr = [1, 2, 3, 4, 5];
+let flag = false;
+
+for (let elem of arr) {
+	if (elem == 3) {
+		flag = true;
+		break;
+	}
+}
+    </pre>
+
+</body>
+</html>
