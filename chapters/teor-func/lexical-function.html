@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1></h1>
+<pre>
+Пусть есть функция, которая возврощает другую функцию
+
+function test() {
+	return function() {
+		
+	}
+}
+
+
+Если родительская функция имеет какие-то переменные, то эти переменные будут 
+содержаться в лексическом окружении(доступных переменных) возврощаемой функции:
+
+function test() {
+	let num = 1; // переменная родительской функции
+	
+	return function() {
+		// лексическое окружение = {num: 1}
+	}
+}
+</pre>
+
+
+</body>
+</html>

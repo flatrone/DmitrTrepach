@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Ньюансы функциональных выражений</h1>
+<p>Название Function Expression (функциональное выражение) дано не просто так. Оно действительно означает это - то, что такие функции являются частью какого-либо выражения. <br>
+    let str = 'str' + function() {return 2;}; <br>
+    alert(str); // выведет 'strfunction() {return 2;}' <br>
+
+</p>
+    <pre>
+        +function() { // такой код корректен, внимание на  плюс
+            alert('!');
+        }  // внимание на точку с запятой, ее может не быть хоть это и выражение
+    </pre>
+
+
+</body>
+</html>

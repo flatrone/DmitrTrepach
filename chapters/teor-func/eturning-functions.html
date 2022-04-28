@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1></h1>
+<pre>
+    Т.к. функция возвращает функцию, можно ее вазвать сразу на месте, вот-так func()()
+    function func() {
+        return function() {
+            return '!';
+        };
+    }
+    
+    alert( func()() ); // выведет '!'
+
+
+    любой уровень ложенности
+
+    function func() {
+        return function() {
+            return function() {
+                return '!';
+            };
+        };
+    }
+    
+    alert( func()()() );
+
+
+    Параметры
+
+    function func(num1) {
+        return function(num2) {
+            return num1 + num2;
+        };
+    }
+    
+    alert( func(1)(2) )
+
+</pre>
+
+
+</body>
+</html>

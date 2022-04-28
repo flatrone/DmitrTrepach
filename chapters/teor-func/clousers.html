@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1></h1>
+<pre>
+Счетчик на замыканиях
+
+function test() {
+	let num = 1;
+	
+	return function() {
+		alert(num);
+	}
+}
+
+let func = test();
+
+
+Для более понятного восприятия, вынесем переменную num в голобал
+
+let num = 1;
+
+function test() {
+	return function() {
+		alert(num);
+		num++;
+	};
+};
+
+let func1 = test();
+
+
+Для еще более легкого понятия, уберем возврощаемую функцию
+
+let num = 1;
+
+function test() {
+        alert(num);
+        num++;
+};
+
+let func1 = test;
+</pre>
+
+
+</body>
+</html>

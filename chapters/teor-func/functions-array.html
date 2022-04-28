@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Массивы и объекты с анонимными функциями</h1>
+<pre>Так как фунцкции ведут себя как строки или числа, можно сделать массив из функций <br>
+    let arr = [
+	function() {alert('1')},
+	function() {alert('2')},
+	function() {alert('3')},
+];
+ <br>
+чтобы вызвать РАБОТАЮЩУЮ функцию, то: 
+<br>
+alert(arr[0]()) // внимание на скобки
+<hr>
+Воспользуемся нашим объектом:
+<br>
+let obj = {
+	func1: function() {alert(1)},
+	func2: function() {alert(2)},
+	func3: function() {alert(3)},
+};
+
+obj.func1(); // выведет 1
+</pre>
+    <pre>
+
+    </pre>
+
+
+</body>
+</html>
