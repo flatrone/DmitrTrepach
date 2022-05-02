@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1></h1>
+<pre>
+    let obj = {
+        year:  2025,
+        month: 12,
+        day:   31,
+    };
+
+    let {year, month, day} = obj;
+
+
+
+    Другие имена переменных
+
+    let {year: y, month: m, day: d} = obj;
+
+
+
+    Значения по умолчанию
+
+    let {year = 2025, month, day} = obj;
+
+
+
+    Другие переменные и значения по умолчанию
+
+    let obj = {
+        month: 12,
+        day:   31,
+    };
+    
+    let {year:y = 2025, month, day} = obj;
+</pre>
+
+</body>
+</html>

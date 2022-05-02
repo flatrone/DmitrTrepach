@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1></h1>
+<pre>
+    let arr = [2025, 12, 31];
+    let [year, month, day] = arr;
+
+
+
+Массив из функции
+
+function func() {
+	return [2025, 12, 31];
+}
+let [year, month, day] = func();
+
+
+
+Пропуск значений
+
+let arr = [2025, 12, 31];
+let [,, day] = arr;
+
+
+
+Остаток
+
+let arr = [2025, 12, 31, 23, 59, 59];
+let [year, month, day, ...time] = arr;
+
+
+
+Значение по умолчанию
+
+let arr = [2025, 12];
+let [year, month, day = 1] = arr;
+</pre>
+
+</body>
+</html>
