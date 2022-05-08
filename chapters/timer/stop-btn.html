@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    let timerId; // сделаем переменную глобальной, если будет локальной
+                 // stop ее не увидит
+
+    start.addEventListener('click', function() {
+        let i = 0;
+        
+        timerId = setInterval(function() {
+            console.log('!')
+        }, 1000);
+    });
+    
+    stop.addEventListener('click', function() {
+        clearInterval(timerId);
+    });
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

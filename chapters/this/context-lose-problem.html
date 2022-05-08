@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    1 решение 
+
+    function parent() {
+        let self = this; // запишем this в любую переменную, например, в self
+        function child() {
+            отсюда доступен self 
+        }
+    }
+
+
+
+    2 решение
+    Передача параметром
+
+    function parent() {
+        child(this); // передаем параметром this
+        
+        function child(param) {
+            // в переменной param лежит переданное содержимое this
+        }
+    }
+
+
+
+    3 решение
+    Не имеют своего контекста, но сохранают контекст родителя
+
+    
+function parent() {
+	console.log(this.value); // выведет 'text'
+	
+	let child = () => {
+		console.log(this.value); // выведет 'text'
+	}
+	child();
+}
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

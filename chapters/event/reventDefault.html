@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    Иногда с помощью JavaScript требуется отменить действие тега по умолчанию. К примеру, по нажатию на ссылку отменить переход по этой ссылке. Как правило такое требуется в том случае, если эту ссылку мы используем просто для запуска какого-либо кода. В этом случае то, что при клике на ссылку произойдет переход по ней, нам совсем не нужно.
+
+    Отмена действия по умолчанию производится с помощью объекта Event. Для этого у него есть специальный метод preventDefault(), который следует вызвать в любом месте обработчика события.
+    
+    Попробуем на практике. Пусть у нас есть вот такая ссылка:
+    <=a href="/" id="elem">ссылка</=a>
+    
+    Давайте сделаем так, чтобы по клику на ссылку не происходило перехода на другую страницу:
+    let elem = document.querySelector('#elem');
+    
+    elem.addEventListener('click', function(event) {
+        event.preventDefault();
+        alert('Вы не можете перейти по этой ссылке!');
+    });
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

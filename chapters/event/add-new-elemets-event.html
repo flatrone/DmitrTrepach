@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    <=ul>
+        <=li>item</=li>
+        <=li>item</=li>
+        <=li>item</=li>
+        <=li>item</=li>
+        <=li>item</=li>
+    </=ul>
+    
+    <=button>add</=button>
+
+
+
+    Добавление элемента
+    button.addEventListener('click', function() {
+        let item = document.createElement('li');
+        item.innerHTML = 'item';
+        list.appendChild(item);
+    });
+
+
+
+    Навешивание событий
+    for (let item of items) {
+        item.addEventListener('click', function() {
+            this.innerHTML = this.innerHTML + '!';
+        });
+    }
+
+
+
+    Проблема - на новые элементы не навешиваются события
+
+
+
+
+    Исправим
+
+    button.addEventListener('click', function() {
+        let item = document.createElement('li');
+        item.innerHTML = 'item';
+        
+        item.addEventListener('click', function() { // обработчик клика
+            this.innerHTML = this.innerHTML + '!';
+        });
+        
+        list.appendChild(item);
+    });
+
+
+
+    Проблема - функция добавления событий повторяется
+    Решение в след уроке
+
+
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

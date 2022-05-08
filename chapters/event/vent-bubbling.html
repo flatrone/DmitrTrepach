@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    Представьте себе, что у вас есть несколько вложенных друг в друга блоков:
+    <=div id="elem1">
+        <=div id="elem2">
+            <=div id="elem3"></=div>
+        </=div>
+    </=div>
+    
+    Получим ссылки на наши дивы в переменные:
+    let elem1 = document.querySelector('#elem1');
+    let elem2 = document.querySelector('#elem2');
+    let elem3 = document.querySelector('#elem3');
+    
+    А теперь навесим на них обработчики кликов:
+    elem1.addEventListener('click', function() {
+        alert('зеленый');
+    });
+    elem2.addEventListener('click', function() {
+        alert('голубой');
+    });
+    elem3.addEventListener('click', function() {
+        alert('красный');
+    });
+    
+    Выведем наши блоки на экран, добавив им некоторый CSS:
+    
+    Нажмите теперь на самый внутренний красный блок - и вы увидите, как событие сначала сработает в красном блоке, потом в голубом, потом в зеленом. И это логично, ведь кликая на внутренний блок, вы одновременно кликаете на все внешние.
+    
+    То есть получается, что когда вы кликаете на самый внутренний блок, событие клика возникает сначала в нем, затем срабатывает в его родителе, в родителе его родителя и так далее, пока не дойдет до самого верха.
+    
+    Такое поведение называется всплытием (англ. bubbling) событий - по аналогии со всплытием пузырька воздуха со дна. Так же, как и пузырек, наше событие как будто выплывает наверх, каждый раз срабатывая на более высоких блоках. 
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

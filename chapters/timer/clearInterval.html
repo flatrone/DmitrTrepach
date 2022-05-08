@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    Все таймеры имеют свой ID 
+
+    Узнаем ID 
+
+    let timerId = setInterval(function() {
+        console.log('!')
+    }, 1000);
+    
+    alert(timerId); // выведет номер таймера
+
+
+    
+    Останавливаем таймеры
+
+    clearInterval(timerId);
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>
