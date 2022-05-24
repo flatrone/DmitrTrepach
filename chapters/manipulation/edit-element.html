@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    элемент.matches('селектор') - позволяет проверить, удовлетворяет ли элемент указанному CSS селектору. 
+    вернет true или false
+
+    родитель.contains(элемент) -позволяет проверить, содержит ли один элемент внутри себя другой
+
+    элемент.closest('селектор') - ищет ближайший родительский элемент, подходящий под указанный CSS селектор
+    <=div class="www" id="parent2">
+        <=div class="ggg" id="parent1">
+            <=p class="zzz" id="child"></=p>
+        </=div>
+    </=div>
+    let elem = document.querySelector('#child');
+    let parent = elem.closest('.www');
+    console.log(parent.id);
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

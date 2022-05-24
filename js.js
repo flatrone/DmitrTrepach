@@ -1,5 +1,10 @@
-let div = document.querySelector('div');
+let elem = document.querySelector('#elem');
+let show = document.querySelector('#show');
+let hide = document.querySelector('#hide');
+hide.addEventListener('click', function() {
+	elem.classList.add('hidden');
+});
 
-div.addEventListener('click', function(event) {
-	alert(event.target);
+show.addEventListener('click', function() {
+	elem.classList.remove('hidden');
 });

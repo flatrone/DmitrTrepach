@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    let parent = document.querySelector('#parent');
+    let elem   = document.querySelector('#elem');
+    
+    parent.removeChild(elem);
+
+
+
+    Получение родителя
+
+Не обязательно иметь ссылку на родительский элемент. Если ее нет, то родителя можно получить через parentElement:
+let elem = document.querySelector('#elem');
+elem.parentElement.removeChild(elem);
+
+
+
+Совсем без родителя
+
+Можно заметить, что иметь ссылку на родителя для удаления самого элемента не очень удобно. Поэтому в современном JavaScript появился метод remove, который просто нужно применить для удаления элемента:
+let elem = document.querySelector('#elem');
+elem.remove();
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

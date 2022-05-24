@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    transition: 1s;
 }
 
 .container {
@@ -26,5 +27,7 @@
 
 
 
-
+.hidden {
+	display: none;
+}
 

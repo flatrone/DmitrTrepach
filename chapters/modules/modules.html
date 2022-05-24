@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    Так переменные не будуи конфликтовать
+
+    ;(function(arg1, arg2) {
+        // тут код модуля
+    })(1, 2);
+
+
+
+    пример
+    1) элементы жестко привязаны
+    ;(function() {
+        let div = document.querySelector('#div');
+        let btn = document.querySelector('#btn');
+        
+        function func(num) {
+            return num * num;
+        }
+        
+        btn.addEventListener('click', function() {
+            div.textContent = func(div.textContent);
+        });
+    })();
+
+
+    2)элементы можно менять через аргументы
+    ;(function(selector1, selector2) {
+        let div = document.querySelector(selector1);
+        let btn = document.querySelector(selector2);
+        
+        function func(num) {
+            return num * num;
+        }
+        
+        btn.addEventListener('click', function() {
+            div.textContent = func(div.textContent);
+        });
+    })('#div', '#btn');
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>

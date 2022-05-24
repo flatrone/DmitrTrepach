@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+снаружи ничего недоступно внутри модуля 
+Но можно получить доступ
+
+
+
+;(function() {
+	let str = 'переменная модуля';
+	
+	window.str = str;  //делаем str глобальной
+})();
+
+str;
+
+
+Экспорт объекта
+;(function() {
+	function func1() {
+		alert('функция модуля');
+	}
+	function func2() {
+		alert('функция модуля');
+	}
+	function func3() {
+		alert('функция модуля');
+	}
+	
+	window.module = {func1: func1, func2: func2, func3: func3};
+    window.module = {func1, func2, func3}; //Сокрпащенная форма
+})();
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>
