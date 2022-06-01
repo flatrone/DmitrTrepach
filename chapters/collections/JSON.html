@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+    JSON данные в кавычках
+    '[1, 2, 3, 4, 5, "a", "b"]'
+
+    `{
+        "data1": [1,2,3],
+        "data2": [4,5,6],
+        "data3": [7,8,9]
+    }`
+
+
+
+
+Преоброзование из JSON в JS
+let json = '[1, 2, 3, 4, 5, "a", "b"]';
+let arr = JSON.parse(json);
+arr - [1, 2, 3, 4, 5]
+
+
+
+Преоброзование в JSON из JS
+let arr = [1, 2, 3, 4, 5, 'a', 'b'];
+let json = JSON.stringify(arr);
+</pre>
+
+
+<script src="../../js.js"></script>
+</body>
+</html>
